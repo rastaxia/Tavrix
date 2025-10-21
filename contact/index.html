@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact · Tavrix</title>
+    <meta name="description"
+        content="Tavrix bouwt simpele, betrouwbare interne tools en dashboards. Klein, snel en duidelijk." />
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav">
+            <div class="brand">Tavrix</div>
+            <nav>
+                <a href="/">Diensten</a>
+                <a href="/over/">Over mij</a>
+                <a href="/contact/">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- CONTACT (Netlify Ready) -->
+        <section id="contact" class="wrap contact">
+            <h2>Contact</h2>
+            <div class="card">
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p style="display:none;">
+                        <label>Laat dit veld leeg: <input name="bot-field" /></label>
+                    </p>
+                    <div class="row">
+                        <div>
+                            <label for="naam">Naam</label>
+                            <input id="naam" name="naam" autocomplete="name" required />
+                        </div>
+                        <div>
+                            <label for="email">E‑mail</label>
+                            <input id="email" name="email" type="email" autocomplete="email" required />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div>
+                            <label for="bedrijf">Bedrijf (optioneel)</label>
+                            <input id="bedrijf" name="bedrijf" autocomplete="organization" />
+                        </div>
+                        <div>
+                            <label for="onderwerp">Onderwerp</label>
+                            <input id="onderwerp" name="onderwerp" required />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div style="grid-column: 1 / -1;">
+                            <label for="bericht">Bericht</label>
+                            <textarea id="bericht" name="bericht" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row" style="align-items:center;">
+                        <div>
+                            <button class="btn primary" type="submit">Versturen</button>
+                        </div>
+                        <p class="hint">Of mail direct: <a href="mailto:info@tavrix.nl">info@tavrix.nl</a></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap foot">
+            <div>© <span id="year"></span> Tavrix</div>
+            <div>NL · Remote‑first</div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

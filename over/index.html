@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Over mij · Tavrix</title>
+    <meta name="description"
+        content="Leer Rob Verheijen kennen – de developer achter Tavrix. Over opleiding, werkervaring, en het ontstaan van Tavrix." />
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav">
+            <div class="brand">Tavrix</div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/over">Over mij</a>
+                <a href="/contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="wrap hero">
+            <h1>Over mij</h1>
+        </section>
+
+        <section class="wrap about">
+            <div class="grid g-2">
+                <div class="card">
+                    <h2>Even kort over mij</h2>
+                    <p>Ik ben Rob Verheijen (22), woon in Noord-Brabant en werk als Junior IT developer bij een bedrijf.
+                        Daarnaast bouw ik via Tavrix aan projecten waar ik m’n eigen draai aan kan geven van kleine
+                        webapps tot op maat gemaakte websites.</p>
+                    <p>Ik heb een Associate Degree in ICT & Media Design aan Fontys, met een focus op frontend en de
+                        brug naar fullstack met Django/Python.</p>
+                    <p>Wat ik het leukst vind: iets maken wat écht gebruikt wordt. Niet eindeloos overleggen, maar
+                        gewoon samen kijken wat werkt en dat bouwen.</p>
+                    <figure style="margin-top:16px; text-align:center;">
+                        <img src="/assets/rob.jpg" alt="Rob Verheijen, Developer & Founder"
+                            style="max-width:180px; border-radius:14px; box-shadow:0 10px 25px rgba(0,0,0,0.35);" />
+                        <figcaption style="margin-top:8px; color:var(--text-soft);">Oh kijk, dat ben ik zelf
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="card">
+                    <h2>Wie ik ben naast code</h2>
+                    <p>Buiten werk ben ik vaak in de sportschool, speel ik graag games (zoals World of Warcraft), en ben ik
+                        regelmatig te vinden bij festivals. Ik hou van muziek, buiten zijn en een goed gesprek over van
+                        alles en nog wat.</p>
+                    <p>Ook heb ik een hond genaamd <strong>Mats</strong>. Hij hoort ook bij het team.</p>
+                    <figure style="margin-top:16px; text-align:center;">
+                        <img src="/assets/mats1.jpg" alt="Mats, Chief of Happiness"
+                            style="max-width:180px; border-radius:14px; box-shadow:0 10px 25px rgba(0,0,0,0.35);" />
+                        <figcaption style="margin-top:8px; color:var(--text-soft);">Mats · Chief of Happiness
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <p style="margin-top:16px; color:var(--text-soft)">
+                Lijkt dit bij je te passen? <a href="/contact" class="btn">Laten we kennismaken</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap foot">
+            <div>© <span id="year"></span> Tavrix</div>
+            <div>NL · Remote-first</div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

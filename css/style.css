@@ -325,3 +325,20 @@ footer {
   object-position: center top;
   /* zoomt iets op bovenkant */
 }
+
+.brand {
+  cursor: pointer;
+  font-variant-ligatures: none;
+}
+
+.logo{
+  padding: 0 !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+}
+
+.logo:hover {
+  border-color: rgba(122, 140, 255, .28);
+  background: transparent !important;
+  text-decoration: none !important;
+}

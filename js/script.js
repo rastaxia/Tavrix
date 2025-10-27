@@ -43,11 +43,5 @@ document.getElementById('year').textContent = new Date().getFullYear();
     if (!running) scrambleOnce(target);
     });
 
-    // Wil je ook iets doen bij mouseleave? (bijv. opnieuw scramblen naar dezelfde tekst)
-    // el.addEventListener("mouseleave", () => {
-    //   if (!running) scrambleOnce(target);
-    // });
-
-    // Kleine perf-hint
     el.style.willChange = "contents";
 })();

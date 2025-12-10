@@ -18,6 +18,11 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -87,6 +92,12 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 18px;
+}
+
+.nav nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .brand {
@@ -537,5 +548,63 @@ footer {
     border-top: 1px solid rgba(122, 140, 255, 0.15);
     padding-left: 0;
     padding-top: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    padding: 0 16px;
+  }
+
+  header {
+    border-bottom: 1px solid rgba(122, 140, 255, 0.16);
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 16px;
+  }
+
+  .nav nav {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+
+  .hero {
+    padding: 72px 0 42px;
+  }
+
+  .hero::after {
+    inset: 6% auto auto 40%;
+    width: 240px;
+    height: 240px;
+    filter: blur(60px);
+  }
+
+  .cta {
+    flex-direction: column;
+  }
+
+  .cta .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  section {
+    padding: 42px 0;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .foot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 }

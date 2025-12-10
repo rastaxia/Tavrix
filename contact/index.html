@@ -7,10 +7,9 @@
     <title>Contact · Tavrix</title>
     <meta name="description"
         content="Tavrix bouwt simpele, betrouwbare interne tools en dashboards. Klein, snel en duidelijk." />
-    <!-- custom css -->
     <link rel="stylesheet" href="/css/style.css" />
-    <!-- custom js -->
     <script src="/js/script.js" defer></script>
+
     <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
     <link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
@@ -26,9 +25,9 @@
                 <div class="brand" data-value="</Tavrix>">&lt;/Tavrix&gt;</div>
             </a>
             <nav>
-                <a href="/">Diensten</a>
+                <a href="/">Home</a>
                 <a href="/over/">Over mij</a>
-                <a href="/contact/">Contact</a>
+                <a href="/contact/" class="is-active">Contact</a>
             </nav>
         </div>
     </header>
@@ -36,60 +35,105 @@
     <main>
         <section id="contact" class="wrap contact">
             <h2 data-animate data-delay="0.05">Contact</h2>
-            <div class="card" data-animate data-delay="0.12">
-                <form id="contact-form" name="contact" method="POST">
-                    <input type="hidden" name="form-name" value="contact" />
-                    <div style="display:none">
-                        <label>Niet invullen
-                            <input name="bot-field" /></label>
-                    </div>
-                    <div class="row">
-                        <div data-animate data-delay="0.18">
-                            <label for="naam">Naam</label>
-                            <input id="naam" name="naam" autocomplete="name" required />
-                        </div>
-                        <div data-animate data-delay="0.24">
-                            <label for="email">E-mail</label>
-                            <input id="email" name="email" type="email" autocomplete="email" required />
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div data-animate data-delay="0.3">
-                            <label for="bedrijf">Bedrijf (optioneel)</label>
-                            <input id="bedrijf" name="bedrijf" autocomplete="organization" />
-                        </div>
-                        <div data-animate data-delay="0.36">
-                            <label for="onderwerp">Onderwerp</label>
-                            <input id="onderwerp" name="onderwerp" required />
-                        </div>
-                    </div>
+            <div class="card contact-card" data-animate data-delay="0.12">
+                <!-- LINKERKANT: FORMULIER -->
+                <div class="contact-main">
+                    <h3>Stuur een bericht</h3>
+                    <p class="hint">Vertel kort wat je zoekt, dan denk ik graag met je mee.</p>
 
-                    <div class="row">
-                        <div style="grid-column: 1 / -1;" data-animate data-delay="0.42">
-                            <label for="bericht">Bericht</label>
-                            <textarea id="bericht" name="bericht" required></textarea>
+                    <form id="contact-form" name="contact" method="POST">
+                        <input type="hidden" name="form-name" value="contact" />
+                        <div style="display:none">
+                            <label>Niet invullen
+                                <input name="bot-field" /></label>
                         </div>
-                    </div>
 
-                    <div class="row" style="align-items:center;" data-animate data-delay="0.48">
-                        <div>
-                            <button class="btn primary" type="submit">Versturen</button>
+                        <div class="row">
+                            <div data-animate data-delay="0.18">
+                                <label for="naam">Naam</label>
+                                <input id="naam" name="naam" autocomplete="name" required />
+                            </div>
+                            <div data-animate data-delay="0.24">
+                                <label for="email">E-mail</label>
+                                <input id="email" name="email" type="email" autocomplete="email" required />
+                            </div>
                         </div>
-                        <p class="hint">
-                            Of mail direct: <a class="directEmail" href="mailto:info@tavrix.nl">info@tavrix.nl</a>
+
+                        <div class="row">
+                            <div data-animate data-delay="0.30">
+                                <label for="bedrijf">Bedrijf (optioneel)</label>
+                                <input id="bedrijf" name="bedrijf" autocomplete="organization" />
+                            </div>
+                            <div data-animate data-delay="0.36">
+                                <label for="onderwerp">Onderwerp</label>
+                                <input id="onderwerp" name="onderwerp" required />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div style="grid-column: 1 / -1;" data-animate data-delay="0.42">
+                                <label for="bericht">Bericht</label>
+                                <textarea id="bericht" name="bericht" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row" style="align-items:center;" data-animate data-delay="0.48">
+                            <div>
+                                <button class="btn primary" type="submit">Versturen</button>
+                            </div>
+                            <p class="hint">
+                                Liever direct mailen?
+                                <a class="directEmail" href="mailto:info@tavrix.nl">info@tavrix.nl</a>
+                            </p>
+                        </div>
+
+                        <!-- feedback messages -->
+                        <p id="contact-success" class="hint" aria-live="polite" style="display:none;color:green;"
+                            data-animate data-delay="0.54">
+                            Bedankt! Je bericht is verstuurd.
                         </p>
+                        <p id="contact-error" class="hint" aria-live="polite" style="display:none;color:red;"
+                            data-animate data-delay="0.54">
+                            Er ging iets mis bij het versturen. Probeer het later nog eens of mail naar
+                            <a class="directEmail" href="mailto:info@tavrix.nl">info@tavrix.nl</a>.
+                        </p>
+                    </form>
+                </div>
+
+                <!-- RECHTS: CONTACT- EN BEDRIJFSGEGEVENS -->
+                <aside class="contact-info">
+                    <h3>Gegevens</h3>
+                    <p class="hint">
+                        Heb je een vraag, wil je sparren over een idee of gewoon even aftasten wat mogelijk is? Laat het
+                        weten.
+                    </p>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">✉</div>
+                        <div>
+                            <div class="contact-label">E-mail</div>
+                            <a class="directEmail" href="mailto:info@tavrix.nl">info@tavrix.nl</a>
+                        </div>
                     </div>
 
-                    <!-- feedback messages -->
-                    <p id="contact-success" class="hint" aria-live="polite" style="display:none;color:green;" data-animate data-delay="0.54">
-                        Bedankt! Je bericht is verstuurd.
-                    </p>
-                    <p id="contact-error" class="hint" aria-live="polite" style="display:none;color:red;" data-animate data-delay="0.54">
-                        Er ging iets mis bij het versturen. Probeer het later nog eens of mail naar
-                        <a class="directEmail" href="mailto:info@tavrix.nl">info@tavrix.nl</a>.
-                    </p>
-                </form>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <div class="contact-label">Locatie</div>
+                            <div>Noord-Brabant · Remote-first</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📒</div>
+                        <div>
+                            <div class="contact-label">Zakelijke gegevens</div>
+                            <div>KvK: 98611666</div>
+                            <div>BTW-id: NL005343204B54</div>
+                        </div>
+                    </div>
+                </aside>
             </div>
         </section>
     </main>
@@ -97,13 +141,15 @@
     <footer>
         <div class="wrap foot">
             <div>© <span id="year"></span> Tavrix</div>
-            <div>NL · Remote‑first</div>
+            <div>
+                <a href="https://www.linkedin.com/in/rob-verheijen-a5076b193/" target="_blank" rel="noopener" class="footer-link">
+                    LinkedIn
+                </a>
+            </div>
         </div>
     </footer>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+
 </body>
 
 </html>

@@ -42,8 +42,12 @@
                     <h3>Stuur een bericht</h3>
                     <p class="hint">Vertel kort wat je zoekt, dan denk ik graag met je mee.</p>
 
-                    <form id="contact-form" name="contact" method="POST">
+                    <form action="https://formsubmit.co/tavrix.dev@gmail.com" id="contact-form" name="contact" method="POST">
                         <input type="hidden" name="form-name" value="contact" />
+                        <!-- FormSubmit config -->
+                        <input type="hidden" name="_subject" value="Nieuw bericht via Tavrix.nl" />
+                        <input type="hidden" name="_template" value="table" />
+                        <input type="hidden" name="_captcha" value="false" />
                         <div style="display:none">
                             <label>Niet invullen
                                 <input name="bot-field" /></label>
